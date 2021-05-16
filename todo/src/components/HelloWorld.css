@@ -1,0 +1,106 @@
+.todoHeader{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--font-color);
+    border-bottom: 2px dashed var(--font-color);
+    font-family: var(--primary-font);
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.logo .desc{
+    font-family: var(--text-font);
+    font-style: italic;
+    line-height: 1rem;
+    font-size: .8rem;
+}
+.logo .desc::after{
+    content: '';
+    width: 3px;
+    height: 1rem;
+    display: inline-block;
+    top: 3px;
+    position: relative;
+    background-color:var(--font-color);
+    animation: writingEffect .45s infinite linear;
+}
+.logo svg {
+    animation: shake 2s infinite linear;
+}
+.logo svg > path {
+    fill: var(--font-color);
+    
+}
+.todoBody{
+    display: flex;
+    margin: 1rem auto;
+    width: 100%;
+    padding: .5rem 1rem;
+    align-items: center;
+    border-radius: .5rem;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.todoBody .lazy{
+    color: var(--font-color);
+    font-family: var(--text-font);
+    max-width: 20rem;
+    font-size: .8rem;
+    text-align: center;
+    animation: slideBottom .3s forwards ease;
+}
+.todoForm{
+    display: flex;
+    width: 100%;
+    gap:.5rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+.todoForm input{
+    outline: none;
+    width: 100%;
+    border: none;
+    font-size: .8rem;
+    font-style: italic;
+    font-family: var(--text-font);
+    color: #333;
+    padding: .5rem;
+    border-radius: .2rem;
+    transition: .2s;
+    font-weight: 700;
+}
+.todoForm input::placeholder{
+    opacity: 0.8;
+    color: #ccc;
+    font-family: var(--text-font);
+    font-weight: 700;
+}
+.todoForm button {
+    border-radius: .2rem;
+    width: 8rem;
+    height: 2.3rem;
+    font-weight: bold;
+    font-family: var(--title-font);
+    background-color: #333;
+    color: var(--font-color);
+    outline: none;
+    border: 1px;
+    transition: .2s;
+    cursor: pointer;
+}
+.todoForm button:hover,
+.todoForm input:hover,
+.todoForm button:focus,
+.todoForm input:focus{
+    border-color:rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
+    /* cursor: pointer; */
+}
