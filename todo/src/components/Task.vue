@@ -36,7 +36,6 @@
                 if(confirm('Você realmente deseja deletar ?')){
                     const tasks = JSON.parse(localStorage.getItem('taskList'));
                     tasks.splice(target.id, 1);
-                    console.log(tasks);
                     localStorage.setItem('taskList', JSON.stringify(tasks));
                     this.$store.commit('setTasks', localStorage.getItem('taskList'))
                 }else{

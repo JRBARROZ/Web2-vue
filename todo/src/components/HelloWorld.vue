@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="todoBody">
-      <template v-if="tasks.length > 0">
+      <template v-if="tasks && tasks.length > 0">
         <Task v-for="(task, index) in tasks" :id="index" :key="index" :task="task.task" :date="task.date" :status="task.status"/>
       </template>
       <template v-else>
@@ -51,15 +51,16 @@
       handleSubmit(e){
         e.preventDefault();
         if(this.message.length != 0 ) {
+          //[]
           const taskList = JSON.parse(localStorage.getItem('taskList')) || [];
+          console.log(taskList);
           const date = new Date();
           const formatedDate = date.toLocaleString('pt-BR');
           taskList.push({
             task: this.message,
             date : formatedDate,
-            status:true
+            status: true
           })
-          console.log(taskList[0].date);
           localStorage.setItem('taskList', JSON.stringify(taskList));
           this.$store.commit('setMessage', '')
           this.$store.commit('setTasks', localStorage.getItem('taskList'))
