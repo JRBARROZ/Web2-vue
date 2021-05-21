@@ -1,5 +1,5 @@
 <template>
-    <div class="task" :class="status === false ? 'finished' : ''">
+    <div class="flex my-2 w-full h-12 bg-gray-100 rounded-md task" :class="status === false ? 'finished' : ''">
         <div class="task-header" >
             <template v-if="status === false">
                 <svg width="28" height="28" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,7 +12,7 @@
                 </svg>
             </template>
             <div>
-                <h1>{{task}}</h1>
+                <h1 class=" text-todoGray text-sm relative font-bold mt-2">{{task}}</h1>
                 <p>{{date}}</p>
             </div>
         </div>

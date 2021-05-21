@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *{
+        @apply p-0 m-0 box-border;
+    }
+    html{
+        @apply text-lg;
+    }
+    body{
+        @apply bg-todoGray text-gray-50 font-nunito;
+    }
+    .title{
+        @apply text-3xl font-lobster;
+    }
+    .finished svg > path {
+        fill: tomato;
+    }
+} 

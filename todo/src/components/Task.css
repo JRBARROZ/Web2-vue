@@ -1,14 +1,4 @@
-.task{
-    display: flex;
-    margin: .5rem 0;
-    width: 100%;
-    height: 3rem;
-    /* border: 1px solid black; */
-    background-color: #F1F1F1;
-    border-radius: .2rem;
-    border-left: 8px solid #333;
-    animation: slideLeft .3s forwards;
-}
+
 .task-header svg{
     animation: slideLeft .3s forwards;
 }

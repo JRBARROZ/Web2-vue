@@ -16,7 +16,6 @@ body{
 .app{
     width: 100%;
     max-width: 620px;
-    height: 100px;
     margin: 0 auto;
     padding: 0rem 1rem;
     --title-font:'Lobster', cursive;
@@ -49,16 +48,7 @@ body{
         transform: rotate(10deg);
     }
 }
-@keyframes slideBottom {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
+
 @keyframes writingEffect {
     0%{
         opacity: 1;
