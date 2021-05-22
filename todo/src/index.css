@@ -11,7 +11,7 @@
         @apply text-lg;
     }
     body{
-        @apply bg-todoGray text-gray-50 font-nunito;
+        @apply bg-todoGray text-gray-50 font-nunito bg-texture-bg;
     }
     .title{
         @apply text-3xl font-lobster;

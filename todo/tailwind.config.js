@@ -11,6 +11,9 @@ module.exports = {
           DEFAULT: "#333"
         }
       },
+      backgroundImage: theme => ({
+        'texture-bg': "url('/tb.png')",
+      }),
       fontFamily:{
           'lobster': ['Lobster', 'cursive'],
           'nunito': ['Nunito', 'Sans-serif']
